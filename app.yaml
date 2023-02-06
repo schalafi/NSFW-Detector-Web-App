@@ -1,6 +1,10 @@
 runtime: python310
 entrypoint: gunicorn -b :$PORT -w 2 -k uvicorn.workers.UvicornWorker main:app  --timeout 80
-
 instance_class: B2
 manual_scaling:
   instances: 1
+resources:
+  cpu: 4
+  memory_gb: 24
+  disk_size_gb: 30
+  
