@@ -6,7 +6,9 @@ from keras.models import  load_model
 
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import Response
-from utilities import transform_image,predict, dict_to_json, json_to_dict,only_strings,init_images_predicted,init_images_uploaded,IMAGES_PREDICTED_DIR
+from utilities import (transform_image,predict, dict_to_json, 
+    json_to_dict,only_strings,init_images_predicted,init_images_uploaded,
+    IMAGES_PREDICTED_DIR, IMAGES_UPLOADED_DIR)
 
 
 #RUN: uvicorn service:app --reload 
