@@ -1,2 +1,5 @@
 runtime: python310
 entrypoint: gunicorn -b :$PORT main:app --timeout 60
+instance_class: B2
+manual_scaling:
+  instances: 1
