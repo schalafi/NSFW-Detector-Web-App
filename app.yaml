@@ -1,2 +1,2 @@
 runtime: python310
-entrypoint: gunicorn -w 2 -k uvicorn.workers.UvicornWorker main:app  --timeout 60
+entrypoint: gunicorn -b :$PORT main:app --timeout 60
