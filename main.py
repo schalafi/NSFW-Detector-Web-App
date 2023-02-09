@@ -67,7 +67,7 @@ async def prediction(confidence:float = 0.2,file: UploadFile = File(...)):
         #Add text label to image "sexy"
         w,h = orig_image.size
         font_size = int(float(w) / 3)
-        font_path ="/"+os.path.join(os.path.dirname(__file__)[3:-1],'magical_story/' + "Magical Story.ttf")
+        font_path =os.path.join(os.path.dirname(__file__)[:-1],'magical_story/' + "Magical Story.ttf")
         print("FONT PATH: ",font_path + '\n', font_size)
         print("Os file exists: ", os.path.exists(font_path) )
         my_font = ImageFont.truetype(font_path, font_size)
